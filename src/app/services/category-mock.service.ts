@@ -18,7 +18,17 @@ export const mockCategory3: Category = {
   name: 'Legs'
 };
 
-export const mockCategories: Array<Category> = [mockCategory1, mockCategory2, mockCategory3];
+export const mockCategories: Array<Category> = [
+  mockCategory1,
+  mockCategory2,
+  mockCategory1,
+  mockCategory2,
+  mockCategory1,
+  mockCategory2,
+  mockCategory1,
+  mockCategory2,
+  mockCategory3
+];
 
 @Injectable({
   providedIn: 'root'

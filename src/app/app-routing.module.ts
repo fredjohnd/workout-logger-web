@@ -6,7 +6,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
   {path: 'admin', children: [
-    {path: 'categories/index', component: CategoryIndexComponent}
+    {path: 'categories', component: CategoryIndexComponent}
   ]},
   {path: 'workouts', component: WorkoutIndexComponent}
 ];

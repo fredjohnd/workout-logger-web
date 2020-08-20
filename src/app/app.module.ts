@@ -14,9 +14,11 @@ import { MatSliderModule } from '@angular/material/slider';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
+import { MatCardModule } from '@angular/material/card';
 import { CategoryIndexComponent } from './containers/manage/categories/category-index/category-index.component';
 import { WorkoutIndexComponent } from './containers/workouts/workout-index/workout-index.component';
 import { ManageIndexComponent } from './containers/manage/manage-index/manage-index.component';
+import { MatRippleModule } from '@angular/material/core';
 
 @NgModule({
   declarations: [
@@ -35,6 +37,8 @@ import { ManageIndexComponent } from './containers/manage/manage-index/manage-in
     MatToolbarModule,
     MatIconModule,
     MatListModule,
+    MatCardModule,
+    MatRippleModule
   ],
   providers: [],
   bootstrap: [AppComponent]

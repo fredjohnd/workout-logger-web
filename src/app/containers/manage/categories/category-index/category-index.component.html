@@ -1,3 +1,20 @@
-<h2>Categories</h2>
+<div fxLayout="column">
 
-<p *ngFor="let item of data | async">{{item.name}}</p>
+  <div fxLayout="row true">
+    <div
+    matRipple
+    matRippleCentered="true"
+    mat-elevation-z4
+    class="card"
+    fxFlex="1 1 23%"
+    fxFlex.lt-md="0 0 45%"
+    *ngFor="let item of data | async">
+
+      <a class="card-link" [routerLink]="item.id">
+        <h3 class="card-title">{{item.name}}</h3>
+        <h4 class="card-subtitle"># Exercises</h4>
+        <img class="card-image" mat-card-image src="https://place-hold.it/300x240">
+      </a>
+
+    </div>
+  </div>
