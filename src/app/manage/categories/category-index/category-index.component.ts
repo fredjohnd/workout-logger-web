@@ -1,4 +1,4 @@
-import { CategoryMockService } from './../../../../services/category-mock.service';
+import { CategoryMockService } from '../../../services/category-mock.service';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
 import { Category } from 'src/app/models/category';
@@ -16,7 +16,8 @@ export class CategoryIndexComponent implements OnInit {
   constructor(private categoryMockService: CategoryMockService, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
-    this.data = this.categoryMockService.getItems('');
+    const { data, queryParams } = this.route.snapshot;
+    this.data = data.items;
   }
 
 }

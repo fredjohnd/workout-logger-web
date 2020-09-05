@@ -15,10 +15,13 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { MatCardModule } from '@angular/material/card';
-import { CategoryIndexComponent } from './containers/manage/categories/category-index/category-index.component';
-import { WorkoutIndexComponent } from './containers/workouts/workout-index/workout-index.component';
-import { ManageIndexComponent } from './containers/manage/manage-index/manage-index.component';
+import { CategoryIndexComponent } from './manage/categories/category-index/category-index.component';
+import { WorkoutIndexComponent } from './workouts/workout-index/workout-index.component';
+import { ManageIndexComponent } from './manage/manage-index/manage-index.component';
 import { MatRippleModule } from '@angular/material/core';
+import { CategoryDetailComponent } from './manage/categories/category-detail/category-detail.component';
+import { ExerciseIndexComponent } from './manage/exercises/exercise-index/exercise-index.component';
+import { ExerciseDetailComponent } from './manage/exercises/exercise-detail/exercise-detail.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +29,10 @@ import { MatRippleModule } from '@angular/material/core';
     NavbarComponent,
     CategoryIndexComponent,
     WorkoutIndexComponent,
-    ManageIndexComponent
+    ManageIndexComponent,
+    CategoryDetailComponent,
+    ExerciseIndexComponent,
+    ExerciseDetailComponent
   ],
   imports: [
     BrowserModule,

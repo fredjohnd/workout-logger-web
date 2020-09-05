@@ -1,0 +1,11 @@
+<div fxLayout="column">
+
+  <div
+  mat-elevation-z4
+  *ngFor="let item of data">
+
+  <a class="card-link" [routerLink]="item.id">
+    <h3 class="card-title">{{item.name}}</h3>
+  </a>
+
+</div>

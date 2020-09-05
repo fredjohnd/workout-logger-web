@@ -5,29 +5,46 @@ import { Category } from '../models/category';
 
 export const mockCategory1: Category = {
   id: 1,
-  name: 'Chest'
+  name: 'Chest',
+  exerciseIds: [1, 8]
 };
 
 export const mockCategory2: Category = {
   id: 2,
-  name: 'Shoulders'
+  name: 'Back',
+  exerciseIds: [3]
 };
 
 export const mockCategory3: Category = {
   id: 3,
-  name: 'Legs'
+  name: 'Legs',
+  exerciseIds: [2, 7]
+};
+
+export const mockCategory4: Category = {
+  id: 4,
+  name: 'Biceps',
+  exerciseIds: [4]
+};
+
+export const mockCategory5: Category = {
+  id: 5,
+  name: 'Triceps',
+  exerciseIds: [5]
+};
+export const mockCategory6: Category = {
+  id: 6,
+  name: 'Abs',
+  exerciseIds: [6]
 };
 
 export const mockCategories: Array<Category> = [
   mockCategory1,
   mockCategory2,
-  mockCategory1,
-  mockCategory2,
-  mockCategory1,
-  mockCategory2,
-  mockCategory1,
-  mockCategory2,
-  mockCategory3
+  mockCategory3,
+  mockCategory4,
+  mockCategory5,
+  mockCategory6,
 ];
 
 @Injectable({
@@ -37,23 +54,24 @@ export class CategoryMockService {
 
   constructor() { }
 
-  getItem(statement: string): Observable<Category> {
-    return of(mockCategory1);
+  getItem(id: string): Observable<Category> {
+    return of(mockCategories.find(x => x.id === +id));
   }
 
-  getItems(statement: string): Observable<Array<Category>> {
+  queryItems(statement: string): Observable<Array<Category>> {
     return of (mockCategories);
   }
 
   createItem(item: Category): Observable<Category> {
-    return of (mockCategory1);
+    mockCategories.push(item);
+    return of (item);
   }
 
   updateItem(item: Category): Observable<Category> {
-    return of(mockCategory1);
+    return of(item);
   }
 
-  deleteItem(id: string): Observable<null> {
+  deleteItem(item: Category): Observable<null> {
     return of(null);
   }
 }

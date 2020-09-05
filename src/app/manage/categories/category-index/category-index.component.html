@@ -8,11 +8,11 @@
     class="card"
     fxFlex="1 1 23%"
     fxFlex.lt-md="0 0 45%"
-    *ngFor="let item of data | async">
+    *ngFor="let item of data">
 
       <a class="card-link" [routerLink]="item.id">
         <h3 class="card-title">{{item.name}}</h3>
-        <h4 class="card-subtitle"># Exercises</h4>
+        <h4 class="card-subtitle">{{item.exerciseIds.length}} Exercises</h4>
         <img class="card-image" mat-card-image src="https://place-hold.it/300x240">
       </a>
 
