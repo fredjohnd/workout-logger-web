@@ -1,52 +1,52 @@
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
 
-import { Exercise } from '../models/exercise';
+import { Exercise } from '../models/exercise.model';
 
 export const mockExercise1: Exercise = {
-  id: 1,
+  id: '1',
   name: 'Bench Press',
   imageURL: 'https://place-hold.it/300x240',
 };
 
 export const mockExercise2: Exercise = {
-  id: 2,
+  id: '2',
   name: 'Squats',
   imageURL: 'https://place-hold.it/300x240'
 };
 
 export const mockExercise3: Exercise = {
-  id: 3,
+  id: '3',
   name: 'Back extension',
   imageURL: 'https://place-hold.it/300x240'
 };
 
 export const mockExercise4: Exercise = {
-  id: 4,
+  id: '4',
   name: 'Bicep Curl',
   imageURL: 'https://place-hold.it/300x240'
 };
 
 export const mockExercise5: Exercise = {
-  id: 5,
+  id: '5',
   name: 'Triceps extension',
   imageURL: 'https://place-hold.it/300x240'
 };
 
 export const mockExercise6: Exercise = {
-  id: 6,
+  id: '6',
   name: 'Crunches',
   imageURL: 'https://place-hold.it/300x240',
 };
 
 export const mockExercise7: Exercise = {
-  id: 7,
+  id: '7',
   name: 'Dumbell lunges',
   imageURL: 'https://place-hold.it/300x240',
 };
 
 export const mockExercise8: Exercise = {
-  id: 8,
+  id: '8',
   name: 'Cable Chest Press',
   imageURL: 'https://place-hold.it/300x240',
 };
@@ -68,7 +68,7 @@ export class ExerciseMockService {
   constructor() { }
 
   getItem(id: string): Observable<Exercise> {
-    return of(mockExercises.find(x => x.id === +id));
+    return of(mockExercises.find(x => x.id === id));
   }
 
   queryItems(statement: string): Observable<Array<Exercise>> {

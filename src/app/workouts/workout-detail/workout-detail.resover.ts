@@ -3,26 +3,27 @@ import { ActivatedRouteSnapshot, RouterStateSnapshot, Resolve } from '@angular/r
 
 import { Observable } from 'rxjs';
 
-import { Exercise } from '../../../models/exercise.model';
-import { ExerciseService } from '../../../services/exercise.service';
+import { Workout } from './../../models/workout.model';
+import { WorkoutService } from './../../services/workout.service';
 
 @Injectable({
   providedIn: 'root'
 })
-export class ExerciseDetailResolver implements Resolve<Exercise> {
+export class WorkoutDetailResolver implements Resolve<Workout> {
 
   constructor(
-    private modelService: ExerciseService,
+    private modelService: WorkoutService,
   ) { }
 
   resolve(
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot
-  ): Observable<Exercise> {
+  ): Observable<Workout> {
     return new Observable(obs => {
 
+      const statement = '';
       this.modelService.getItem(route.params.id).subscribe({
-        next: (item: Exercise) => {
+        next: (item: Workout) => {
           obs.next(item);
           obs.complete();
         },

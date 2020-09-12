@@ -1,5 +1,5 @@
 export class Category {
-  id: number;
+  id: string;
   name: string;
-  exerciseIds: number[];
+  exerciseIds: string[];
 }

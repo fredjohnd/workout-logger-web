@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 
-import { Exercise } from '../models/exercise';
+import { Exercise } from '../models/exercise.model';
 import { ExerciseMockService } from './exercise-mock.service';
 
 /**

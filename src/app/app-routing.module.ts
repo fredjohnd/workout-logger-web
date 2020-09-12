@@ -1,3 +1,6 @@
+import { WorkoutDetailResolver } from './workouts/workout-detail/workout-detail.resover';
+import { WorkoutDetailComponent } from './workouts/workout-detail/workout-detail.component';
+import { WorkoutIndexResolver } from './workouts/workout-index/workout-index.resolver';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
@@ -21,7 +24,10 @@ import { ExerciseDetailResolver } from './manage/exercises/exercise-detail/exerc
 
 const routes: Routes = [
 
-  {path: 'workouts', component: WorkoutIndexComponent},
+  {path: 'workouts', children: [
+    {path: '', pathMatch: 'full', component: WorkoutIndexComponent, resolve: {items: WorkoutIndexResolver}},
+    {path: ':id', component: WorkoutDetailComponent, resolve: {item: WorkoutDetailResolver}}
+  ]},
 
   {path: 'admin', children: [
 

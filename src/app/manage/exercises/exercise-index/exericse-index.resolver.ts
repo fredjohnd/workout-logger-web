@@ -3,7 +3,7 @@ import { ActivatedRouteSnapshot, RouterStateSnapshot, Resolve } from '@angular/r
 
 import { Observable } from 'rxjs';
 
-import { Exercise } from './../../../models/exercise';
+import { Exercise } from './../../../models/exercise.model';
 import { ExerciseService } from './../../../services/exercise.service';
 
 @Injectable({

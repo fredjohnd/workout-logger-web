@@ -3,7 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 
 import { Observable } from 'rxjs';
 
-import { Exercise } from 'src/app/models/exercise';
+import { Exercise } from 'src/app/models/exercise.model';
 
 @Component({
   selector: 'app-exercise-detail',

@@ -1,4 +1,6 @@
+import { ActivatedRoute } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
+import { Workout } from '../../models/workout.model';
 
 @Component({
   selector: 'app-workout-index',
@@ -7,9 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class WorkoutIndexComponent implements OnInit {
 
-  constructor() { }
+  constructor(private route: ActivatedRoute) { }
+
+  data: Workout[];
 
   ngOnInit(): void {
+    const { data, queryParams } = this.route.snapshot;
+    this.data = data.items;
   }
 
 }

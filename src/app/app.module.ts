@@ -22,6 +22,7 @@ import { MatRippleModule } from '@angular/material/core';
 import { CategoryDetailComponent } from './manage/categories/category-detail/category-detail.component';
 import { ExerciseIndexComponent } from './manage/exercises/exercise-index/exercise-index.component';
 import { ExerciseDetailComponent } from './manage/exercises/exercise-detail/exercise-detail.component';
+import { WorkoutDetailComponent } from './workouts/workout-detail/workout-detail.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { ExerciseDetailComponent } from './manage/exercises/exercise-detail/exer
     ManageIndexComponent,
     CategoryDetailComponent,
     ExerciseIndexComponent,
-    ExerciseDetailComponent
+    ExerciseDetailComponent,
+    WorkoutDetailComponent
   ],
   imports: [
     BrowserModule,

@@ -1,7 +1,7 @@
 import { CategoryMockService } from '../../../services/category-mock.service';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
-import { Category } from 'src/app/models/category';
+import { Category } from 'src/app/models/category.model';
 import { Observable } from 'rxjs';
 
 @Component({

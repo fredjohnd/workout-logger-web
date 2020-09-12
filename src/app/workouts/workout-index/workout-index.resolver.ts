@@ -3,27 +3,28 @@ import { ActivatedRouteSnapshot, RouterStateSnapshot, Resolve } from '@angular/r
 
 import { Observable } from 'rxjs';
 
-import { Exercise } from '../../../models/exercise.model';
-import { ExerciseService } from '../../../services/exercise.service';
+import { Workout } from './../../models/workout.model';
+import { WorkoutService } from './../../services/workout.service';
 
 @Injectable({
   providedIn: 'root'
 })
-export class ExerciseDetailResolver implements Resolve<Exercise> {
+export class WorkoutIndexResolver implements Resolve<Array<Workout>> {
 
   constructor(
-    private modelService: ExerciseService,
+    private modelService: WorkoutService,
   ) { }
 
   resolve(
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot
-  ): Observable<Exercise> {
+  ): Observable<Array<Workout>> {
     return new Observable(obs => {
 
-      this.modelService.getItem(route.params.id).subscribe({
-        next: (item: Exercise) => {
-          obs.next(item);
+      const statement = '';
+      this.modelService.queryItems(statement).subscribe({
+        next: (items: Array<Workout>) => {
+          obs.next(items);
           obs.complete();
         },
         error: () => {

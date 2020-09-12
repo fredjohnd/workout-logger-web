@@ -3,7 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 
 import { Observable } from 'rxjs';
 
-import { Exercise } from 'src/app/models/exercise';
+import { Exercise } from 'src/app/models/exercise.model';
 import { ExerciseMockService } from './../../../services/exercise-mock.service';
 
 @Component({

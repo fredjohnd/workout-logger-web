@@ -1,0 +1,11 @@
+<h2>{{data.description}}</h2>
+<h3>{{data.startDateTime | date:'EEEE dd MMMM yyyy HH:mm'}} - {{data.endDateTime | date:'HH:mm'}} </h3>
+<div *ngFor="let group of data.plan">
+  <h4 *ngIf="group.isCategory"> Category {{group.categoryId}}</h4>
+  <h4 *ngIf="group.isSuperset">Superset</h4>
+  <ul>
+    <li *ngFor="let exercise of group.exercises">
+      Exercise {{exercise.exerciseId}}: {{exercise.values.join(', ')}}
+    </li>
+  </ul>
+</div>

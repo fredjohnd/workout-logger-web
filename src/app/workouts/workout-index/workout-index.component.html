@@ -1,1 +1,4 @@
 <p>workout-index works!</p>
+<ul>
+  <li *ngFor="let item of data"><a [routerLink]="item.id">{{item.id}} - {{item.startDateTime | date:'EEEE'}} {{item.startDateTime | date:'medium'}} - {{item.endDateTime | date:'shortTime'}}</a></li>
+</ul>

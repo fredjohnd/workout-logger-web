@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 
-import { Category } from '../models/category';
+import { Category } from '../models/category.model';
 import { CategoryMockService } from './category-mock.service';
 
 /**

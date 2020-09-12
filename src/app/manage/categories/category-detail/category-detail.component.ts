@@ -3,9 +3,8 @@ import { ActivatedRoute } from '@angular/router';
 
 import { Observable } from 'rxjs';
 
-import { CategoryMockService } from 'src/app/services/category-mock.service';
-import { Category } from 'src/app/models/category';
-import { Exercise } from 'src/app/models/exercise';
+import { Category } from 'src/app/models/category.model';
+import { Exercise } from 'src/app/models/exercise.model';
 
 @Component({
   selector: 'app-category-detail',
@@ -17,7 +16,7 @@ export class CategoryDetailComponent implements OnInit {
   data: Category;
   exercises: Observable<Array<Exercise>>;
 
-  constructor(private categoryMockService: CategoryMockService, private route: ActivatedRoute) { }
+  constructor(private route: ActivatedRoute) { }
 
   ngOnInit(): void {
     const { data, queryParams } = this.route.snapshot;

@@ -1,41 +1,41 @@
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
 
-import { Category } from '../models/category';
+import { Category } from '../models/category.model';
 
 export const mockCategory1: Category = {
-  id: 1,
+  id: '1',
   name: 'Chest',
-  exerciseIds: [1, 8]
+  exerciseIds: ['1', '8']
 };
 
 export const mockCategory2: Category = {
-  id: 2,
+  id: '2',
   name: 'Back',
-  exerciseIds: [3]
+  exerciseIds: ['3']
 };
 
 export const mockCategory3: Category = {
-  id: 3,
+  id: '3',
   name: 'Legs',
-  exerciseIds: [2, 7]
+  exerciseIds: ['2', '7']
 };
 
 export const mockCategory4: Category = {
-  id: 4,
+  id: '4',
   name: 'Biceps',
-  exerciseIds: [4]
+  exerciseIds: ['4']
 };
 
 export const mockCategory5: Category = {
-  id: 5,
+  id: '5',
   name: 'Triceps',
-  exerciseIds: [5]
+  exerciseIds: ['5']
 };
 export const mockCategory6: Category = {
-  id: 6,
+  id: '6',
   name: 'Abs',
-  exerciseIds: [6]
+  exerciseIds: ['6']
 };
 
 export const mockCategories: Array<Category> = [
@@ -55,7 +55,7 @@ export class CategoryMockService {
   constructor() { }
 
   getItem(id: string): Observable<Category> {
-    return of(mockCategories.find(x => x.id === +id));
+    return of(mockCategories.find(x => x.id === id));
   }
 
   queryItems(statement: string): Observable<Array<Category>> {

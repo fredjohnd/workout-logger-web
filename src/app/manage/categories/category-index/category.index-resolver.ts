@@ -3,8 +3,8 @@ import { ActivatedRouteSnapshot, RouterStateSnapshot, Resolve } from '@angular/r
 
 import { Observable } from 'rxjs';
 
-import { Category } from './../../../models/category';
-import { CategoryService } from './../../../services/category-service';
+import { Category } from './../../../models/category.model';
+import { CategoryService } from './../../../services/category.service';
 
 @Injectable({
   providedIn: 'root'
